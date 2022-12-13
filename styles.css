@@ -1,0 +1,14 @@
+#box{
+    display:flex;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#buttons{
+    align-self: center
+}
+
+.center{
+    align-self: center;
+}

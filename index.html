@@ -4,61 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
     <title>Document</title>
 </head>
 <body>
-    <script>
-        let cpu_win =0;
-        let p_win =0;
-        let tie = 0;
-        function playRound(playerSelection, computerSelection) {
-            playerSelection = playerSelection.toLowerCase();
-  if (playerSelection == computerSelection)
-  {
-    tie++;
-    return "tie";
-  }
-  else if (computerSelection == "rock" && playerSelection == "paper" || computerSelection == "paper" && playerSelection == "scissors" || computerSelection == "scissors" && playerSelection == "rock")    
-  {
-    let statement = "You win! "+playerSelection + " beats "+computerSelection;
-    p_win++;
-    return statement;
-}
-else if (computerSelection=="paper" && playerSelection=="rock" || computerSelection=="scissors" && playerSelection == "paper" || computerSelection=="rock" && playerSelection=="scissors")
-{
-    let statement = "You lose! "+computerSelection+ " beats "+playerSelection;
-    cpu_win++;
-    return statement;
-}
-        }
- 
-function getComputerChoice() {
-    let choice = Math.floor(Math.random() *3);
-    if (choice == 0) {
-        return "rock";
-    }
-    else if (choice == 1) {
-        return "paper";
-    }
-
-    else if (choice == 2) {
-        return "scissors";
-    }
-}
-
-function game(){
-    for (let i = 0; i <5; i++){
-        console.log(playRound(getInput().toLowerCase(), getComputerChoice()));
-    }
-}
-function getInput(){
-    let playerChoice = window.prompt("Enter your choice");
-    return playerChoice;
-}
-
-game();
-consol.log("Game over! The score was: "+p_win +" points to you, "+ cpu_win+" points to the computer and "+tie+" ties");
-    </script>
-    
+   <div id="box">
+   <div id="buttons">
+    <button id="rock">Rock</button>
+    <button id="paper">Paper</button>
+    <button id="scissors">Scissors</button>
+   </div>
+   </div>
 </body>
 </html>
